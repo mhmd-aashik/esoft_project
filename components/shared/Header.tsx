@@ -7,7 +7,7 @@ import NavItems from "./NavItems";
 
 const Header = () => {
   return (
-    <header className="w-full bg-[#020617]">
+    <header className="w-full bg-[#020617] sticky top-0">
       <nav className="max-w-7xl flex items-center justify-between  lg:mx-auto p-5 md:px-10 xl:px-0">
         <Link href="/" className="w-fit flex gap-3 items-center">
           <p className="text-3xl font-poppins font-bold">
