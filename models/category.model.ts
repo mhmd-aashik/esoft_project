@@ -1,5 +1,4 @@
 import { Document, Schema, model, models } from "mongoose";
-import { any } from "zod";
 
 export interface ICategory extends Document {
   _id: string;
