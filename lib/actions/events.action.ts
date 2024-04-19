@@ -5,12 +5,11 @@ import { connectToDatabase } from "../mongoose";
 import User from "@/models/userModel";
 import Event from "@/models/eventModel";
 
-
 export const createEvent = async ({
   event,
   userId,
   path,
-}: CreateEventParams) => {
+}: any) => {
   try {
     await connectToDatabase();
 

@@ -24,12 +24,12 @@ import {
   getAllCategories,
 } from "@/lib/actions/category.action";
 
-interface DropdownProps {
+interface DropDownProps {
   value?: string;
   onChangeHandler?: () => void;
 }
 
-const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
+const Dropdown = ({ value, onChangeHandler }: DropDownProps) => {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [newCategory, setNewCategory] = useState("");
 
@@ -50,7 +50,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   }, []);
   return (
     <Select onValueChange={onChangeHandler} defaultValue={value}>
-      <SelectTrigger className="select-field ">
+      <SelectTrigger className="select-field">
         <SelectValue placeholder="Category" />
       </SelectTrigger>
       <SelectContent>
@@ -58,7 +58,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
           categories.map((category) => (
             <SelectItem
               key={category._id}
-              value={category.name}
+              value={category._id}
               className="select-item p-regular-14"
             >
               {category.name}
@@ -66,7 +66,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
           ))}
         <AlertDialog>
           <AlertDialogTrigger className="p-medium-14 w-full flex rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 focus:text-primary-500">
-            Click To Add New Category
+            Add New Category
           </AlertDialogTrigger>
           <AlertDialogContent className="bg-white">
             <AlertDialogHeader>
@@ -75,7 +75,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
                 <Input
                   type="text"
                   placeholder="Category Name"
-                  className="input-field mt-3 bg-slate-200"
+                  className="input-field mt-3"
                   onChange={(e) => setNewCategory(e.target.value)}
                 />
               </AlertDialogDescription>
