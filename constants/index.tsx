@@ -14,18 +14,18 @@ export const headerLinks = [
     label: "Events",
     route: "/events",
   },
+  {
+    label: "Create Event",
+    route: "/events/create",
+  },
   // {
-  //   label: "Create Event",
-  //   route: "/events/create",
+  //   label: "About",
+  //   route: "/about",
   // },
-  {
-    label: "About",
-    route: "/about",
-  },
-  {
-    label: "My Profile",
-    route: "/profile",
-  },
+  // {
+  //   label: "My Profile",
+  //   route: "/profile",
+  // },
 ];
 
 interface Review {
@@ -109,3 +109,19 @@ export const reviews: Review[] = [
       "Program coordinators were very responsible and helped suggest and arrange activities for us outside the volunteering.",
   },
 ];
+
+export const eventDefaultValues = {
+  title: "",
+  description: "",
+  location: "",
+  imageUrl: "",
+  startDateTime: new Date(),
+  endDateTime: new Date(),
+  categoryId: "",
+  price: "",
+  isFree: false,
+  descriptionTitle: "",
+  age: "",
+  language: "",
+  Exprience: "",
+};

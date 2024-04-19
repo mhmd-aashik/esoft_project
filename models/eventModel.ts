@@ -11,12 +11,11 @@ export interface IEvent extends Document {
   endDateTime: Date;
   price: string;
   isFree: boolean;
-  url?: string;
   descriptionTitle: string;
-  age: number;
-  language: string[];
-  Exprience: string[];
-  skills: string[];
+  age: string;
+  language: string;
+  Exprience: string;
+  skills: string;
   category: { _id: string; name: string };
   organizer: { _id: string; firstName: string; lastName: string };
 }
@@ -31,11 +30,10 @@ const EventSchema = new Schema({
   endDateTime: { type: Date, default: Date.now },
   price: { type: String },
   isFree: { type: Boolean, default: false },
-  url: { type: String },
   descriptionTitle: { type: String },
-  age: { type: Number },
-  language: [{ _id: String, type: String }],
-  Exprience: [{ _id: String, type: String }],
+  age: { type: String },
+  language: { type: String },
+  Exprience: { type: String },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   organizer: { type: Schema.Types.ObjectId, ref: "User" },
 });
