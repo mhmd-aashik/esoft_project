@@ -120,8 +120,8 @@ export const eventDefaultValues = {
   categoryId: "",
   price: "",
   isFree: false,
-  descriptionTitle: "",
   age: "",
   language: "",
-  Exprience: "",
+  exprience: "",
+  skills: "",
 };

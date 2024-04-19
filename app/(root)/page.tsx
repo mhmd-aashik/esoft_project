@@ -1,3 +1,4 @@
+import { AccordianFAQ } from "@/components/shared/home/AccordianFAQ";
 import Accordion from "@/components/shared/home/Accordion";
 import LogoSlider from "@/components/shared/home/LogoSlider";
 import Review from "@/components/shared/home/Review";
@@ -6,12 +7,12 @@ import VideoSction from "@/components/shared/home/VideoSction";
 
 export default async function Home() {
   return (
-    <main className="bg-[#020617]">
+    <main className="bg-[#020617] h-full">
       <ShuffleHero />
       {/* <LogoSlider /> */}
       <VideoSction />
       <Review />
-      <Accordion />
+      <AccordianFAQ />
     </main>
   );
 }

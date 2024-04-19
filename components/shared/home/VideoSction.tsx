@@ -9,7 +9,7 @@ const VideoSction = () => {
           Why be a Volunteer?
         </h3>
 
-        <p className="text-xl md:font-semibold text-white text-center max-w-2xl">
+        <p className="text-xl md:font-semibold text-slate-400 text-center max-w-2xl">
           With more volunteers and more volunteer opportunities than any other
           service, VolunteerMatch is how good people and good causes get
           connected .

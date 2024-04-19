@@ -16,8 +16,8 @@ export const formSchema = z.object({
   categoryId: z.string(),
   price: z.string(),
   isFree: z.boolean(),
-  descriptionTitle: z.string(),
   age: z.string(),
   language: z.string(),
-  Exprience: z.string(),
+  exprience: z.string(),
+  skills: z.string().min(3),
 });

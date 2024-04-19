@@ -11,10 +11,9 @@ export interface IEvent extends Document {
   endDateTime: Date;
   price: string;
   isFree: boolean;
-  descriptionTitle: string;
   age: string;
   language: string;
-  Exprience: string;
+  exprience: string;
   skills: string;
   category: { _id: string; name: string };
   organizer: { _id: string; firstName: string; lastName: string };
@@ -30,10 +29,10 @@ const EventSchema = new Schema({
   endDateTime: { type: Date, default: Date.now },
   price: { type: String },
   isFree: { type: Boolean, default: false },
-  descriptionTitle: { type: String },
   age: { type: String },
   language: { type: String },
-  Exprience: { type: String },
+  exprience: { type: String },
+  skills: { type: String },
   category: { type: Schema.Types.ObjectId, ref: "Category" },
   organizer: { type: Schema.Types.ObjectId, ref: "User" },
 });

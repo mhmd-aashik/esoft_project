@@ -20,12 +20,12 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Input } from "../ui/input";
 
-interface DropDownProps {
+interface DropdownProps {
   value?: string;
   onChangeHandler?: () => void;
 }
 
-const Dropdown = ({ value, onChangeHandler }: DropDownProps) => {
+const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [newCategory, setNewCategory] = useState("");
 
