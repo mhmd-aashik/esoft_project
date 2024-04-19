@@ -18,7 +18,7 @@ const NavItems = () => {
             key={link.route}
             className={`${
               isActive
-                ? "text-ijlal-500 font-bold"
+                ? "text-orange-500 font-bold"
                 : "text-white flex-center p-medium-16 whitespace-nowrap font-poppins"
             }`}
           >
