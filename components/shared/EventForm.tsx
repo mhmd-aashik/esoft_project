@@ -26,7 +26,7 @@ import { Checkbox } from "../ui/checkbox";
 import { useRouter } from "next/navigation";
 import { createEvent } from "@/lib/actions/events.action";
 import { useUploadThing } from "@/lib/uploadthing";
-import { Dropdown } from "./Dropdown";
+import CategoryMenu from "./CategoryMenu";
 
 interface Props {
   userId: string;
@@ -106,7 +106,7 @@ const EventForm = ({ type, userId }: Props) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <Dropdown
+                  <CategoryMenu
                     onChangeHandler={field.onChange}
                     value={field.value}
                   />
