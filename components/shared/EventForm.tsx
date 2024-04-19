@@ -91,7 +91,7 @@ const EventForm = ({ type, userId }: Props) => {
               <FormItem className="w-full">
                 <FormControl>
                   <Input
-                    placeholder="Event Title"
+                    placeholder="Event title"
                     {...field}
                     className="input-field"
                   />
@@ -100,7 +100,6 @@ const EventForm = ({ type, userId }: Props) => {
               </FormItem>
             )}
           />
-
           <FormField
             control={form.control}
             name="categoryId"
