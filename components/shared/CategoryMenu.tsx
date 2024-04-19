@@ -20,14 +20,17 @@ import {
 import { Input } from "../ui/input";
 
 import { ICategory } from "@/models/category.model";
-import { createCategory, getAllCategories } from "@/lib/actions/category.action";
+import {
+  createCategory,
+  getAllCategories,
+} from "@/lib/actions/category.action";
 
 type DropdownProps = {
   value?: string;
   onChangeHandler?: () => void;
 };
 
-const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
+const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [newCategory, setNewCategory] = useState("");
 
@@ -97,4 +100,4 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   );
 };
 
-export default Dropdown;
+export default CategoryMenu;
