@@ -147,3 +147,54 @@ export const reviews: Review[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
   },
 ];
+
+export const questAnsw = [
+  {
+    id: 1,
+    question: "",
+    answer:
+      "",
+  },
+  {
+    id: 2,
+    question: "",
+    answer:
+      "",
+  },
+  {
+    id: 3,
+    question: "",
+    answer:
+      "",
+  },
+  {
+    id: 4,
+    question: "How much time do I need to commit as a volunteer ?",
+    answer:
+      "",
+  },
+  {
+    id: 5,
+    question: "",
+    answer:
+      "",
+  },
+  {
+    id: 6,
+    question: "",
+    answer:
+      "",
+  },
+  {
+    id: 7,
+    question: "",
+    answer:
+      "",
+  },
+  {
+    id: 8,
+    question: "",
+    answer:
+      "",
+  },
+];

@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center px-4 text-white bg-[#020617] ">
+    <footer className="flex justify-center px-4 pt-8  text-white bg-[#020617] ">
       <div className="container px-6 py-6">
         <h1 className="text-lg font-bold text-center lg:text-2xl">
           Join 31,000+ other and never miss <br /> out on new tips, tutorials,

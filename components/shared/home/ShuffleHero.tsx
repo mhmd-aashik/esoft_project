@@ -10,7 +10,7 @@ const ShuffleHero = () => {
         <h3 className="text-4xl md:text-6xl text-white font-semibold text-center">
           Empower. Engage. Change Together.
         </h3>
-        <p className="text-base md:text-lg text-slate-400 my-4 md:my-6 line-clamp-2">
+        <p className="text-base md:text-lg text-slate-400 my-4 md:my-6 line-clamp-2 text-center">
           Empower volunteers to make a meaningful impact by providing resources,
           support, and opportunities for growth...
         </p>
