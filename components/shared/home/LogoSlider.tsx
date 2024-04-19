@@ -12,44 +12,50 @@ const LogoSlider = () => {
           Our Official Partners
         </h2>
       </div>
-      <Marquee className="py-4 " pauseOnHover={true} speed={20}>
-        <div className="flex md:space-x-30 space-x-14 items-center ">
+      <Marquee
+        className="py-4 flex items-center"
+        pauseOnHover={true}
+        speed={20}
+      >
+        <div className="flex items-center">
           <Image
-            src="/assets/logos/hutch.png"
+            src="/assets/logos/1.png"
             width={150}
             height={100}
             alt="abans"
-            className="ml-16 filter grayscale"
           />
           <Image
-            src="/assets/logos/abans.png"
+            src="/assets/logos/2.png"
             width={150}
             height={100}
-            alt="abans"
-            className="filter grayscale"
+            alt="daraz"
+            className="w-[200px] h-[300] overflow-hidden"
           />
           <Image
-            src="/assets/logos/daraz.png"
+            src="/assets/logos/3.png"
             width={150}
             height={100}
-            alt="abans"
-            className="filter grayscale"
-          />
-
-          <Image
-            src="/assets/logos/koko.png"
-            width={150}
-            height={100}
-            alt="abans"
-            className="filter grayscale"
+            alt="dialog"
           />
 
           <Image
-            src="/assets/logos/singer.png"
+            src="/assets/logos/4.png"
             width={150}
             height={100}
-            alt="abans"
-            className="filter grayscale"
+            alt="oppo"
+          />
+
+          <Image
+            src="/assets/logos/5.png"
+            width={150}
+            height={100}
+            alt="airtel"
+          />
+          <Image
+            src="/assets/logos/6.png"
+            width={150}
+            height={100}
+            alt="ikman"
           />
         </div>
       </Marquee>

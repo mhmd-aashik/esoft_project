@@ -31,7 +31,6 @@ export const headerLinks = [
 interface Review {
   id: number;
   name: string;
-  role: string;
   image: string;
   review: string;
 }
@@ -39,162 +38,74 @@ interface Review {
 export const reviews: Review[] = [
   {
     id: 1,
-    name: "John Doe",
-    role: "fullstack developer",
+    name: "Kamal Perera",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/C5603AQEYirprb0qX_g/profile-displayphoto-shrink_800_800/0/1616590483499?e=2147483647&v=beta&t=0zjHss2h6T-YuDMhH3cAlpk35rQpd1JjzikZvcqplDA",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "Step by step guidance is provided for every stage for all volunteering programs.",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "backend developer",
+    name: "Samantha Silva",
     image:
-      "https://images.unsplash.com/photo-1512428559087-2a4eeac0b4f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://i.pinimg.com/736x/d8/49/3a/d8493ac925b717b4da02f545f7e99004.jpg",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "Program coordinators were helpful when booking these programs, really friendly, understanding and patient.",
   },
-  // Add more dummy objects here...
   {
     id: 3,
-    name: "Alice Johnson",
-    role: "frontend developer",
+    name: "Nadeesha Fernando",
     image:
-      "https://images.unsplash.com/photo-1521119989659-04d32cf4c0da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/D5603AQGJ9i4nRbCaXQ/profile-displayphoto-shrink_800_800/0/1664270306112?e=2147483647&v=beta&t=jp4ICLTA2SSV7JtAKwfg5dlfPjzPaetWhpbKZNX4GUg",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "I made so many awesome memories there and I got to meet the loveliest people. Everyone was super welcoming and open.",
   },
   {
     id: 4,
-    name: "Bob Brown",
-    role: "UI/UX designer",
+    name: "Roshan Bandara",
     image:
-      "https://images.unsplash.com/photo-1528145260179-52ab9eae49d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://thumbs.dreamstime.com/b/male-portrait-headshot-looking-to-camera-image-looks-great-black-white-too-36151720.jpg",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "- It was very interesting to work on different programs. Overall, the experience is really good.",
   },
   {
     id: 5,
-    name: "David Wilson",
-    role: "data scientist",
+    name: "Dilani Rathnayake",
     image:
-      "https://images.unsplash.com/photo-1526880791944-941a7eef9964?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/D4D03AQGH3XT5L8LAWg/profile-displayphoto-shrink_800_800/0/1665684400265?e=2147483647&v=beta&t=Se4VJbzVpciB7hJRbTuURhiYkUcWtbgHPmXoqVlfQ8Y",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "I had so many opportunities to explore countries and learn something about the culture.",
   },
   {
     id: 6,
-    name: "Emily Davis",
-    role: "software engineer",
+    name: "Chaminda Perera",
     image:
-      "https://images.unsplash.com/photo-1530595466252-86fd1c4e7de2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/D5603AQHW3SyZzg26uw/profile-displayphoto-shrink_800_800/0/1708596689621?e=2147483647&v=beta&t=-xmMlNVwLcyLH_YfFkhpfk2pXxRlO0EPJWIBL3XO4H4",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "you easily meet new friends who you can hang out with and discover new adventures.",
   },
   {
     id: 7,
-    name: "Fiona Clark",
-    role: "backend developer",
+    name: "Ishara Rajapaksa",
     image:
-      "https://images.unsplash.com/photo-1544011785-f93b3f87a1f8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/D5603AQEQjOfi9wQ_jQ/profile-displayphoto-shrink_800_800/0/1694199756068?e=2147483647&v=beta&t=K13n8YPucKrruo6u5bm827B0Izo3YBnSCh6lfS7NeK4",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "Programs had amazing host accommodation that made you feel like part of the family.",
   },
   {
     id: 8,
-    name: "George Martin",
-    role: "fullstack developer",
+    name: "Ranil Mendis",
     image:
-      "https://images.unsplash.com/photo-1529250171732-49901e1c37a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/D5603AQEHePADNnUirg/profile-displayphoto-shrink_800_800/0/1695918296052?e=2147483647&v=beta&t=n_YSiJ5AnqvX-xNZFUTcjgXfydYQcA7L2LF5KGkikG0",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
+      "It was an amazing experience I will never forget. I really enjoyed being a part of this community effort. I look forward to volunteering in these programs again in the future.",
   },
   {
     id: 9,
-    name: "Hannah Lee",
-    role: "frontend developer",
+    name: "Chathuri Jayawardena",
     image:
-      "https://images.unsplash.com/photo-1544228867-3817f3e0c1e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+      "https://media.licdn.com/dms/image/C4E03AQFVZYx8lzULAA/profile-displayphoto-shrink_800_800/0/1658320342362?e=2147483647&v=beta&t=Bd6r1h8o2fIyNoCPBgxZxDFZ81efo5Tai1FLzUWrXdc",
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
-  },
-  {
-    id: 10,
-    name: "Ian Turner",
-    role: "backend developer",
-    image:
-      "https://images.unsplash.com/photo-1559310581-1159a925498b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
-    review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
-  },
-  {
-    id: 11,
-    name: "Jackie Robinson",
-    role: "software engineer",
-    image:
-      "https://images.unsplash.com/photo-1566075651282-60f8b8bce67d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
-    review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
-  },
-  {
-    id: 12,
-    name: "Katherine White",
-    role: "UI/UX designer",
-    image:
-      "https://images.unsplash.com/photo-1543097480-cff7c7e2bb1b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
-    review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod.",
-  },
-];
-
-export const questAnsw = [
-  {
-    id: 1,
-    question: "",
-    answer:
-      "",
-  },
-  {
-    id: 2,
-    question: "",
-    answer:
-      "",
-  },
-  {
-    id: 3,
-    question: "",
-    answer:
-      "",
-  },
-  {
-    id: 4,
-    question: "How much time do I need to commit as a volunteer ?",
-    answer:
-      "",
-  },
-  {
-    id: 5,
-    question: "",
-    answer:
-      "",
-  },
-  {
-    id: 6,
-    question: "",
-    answer:
-      "",
-  },
-  {
-    id: 7,
-    question: "",
-    answer:
-      "",
-  },
-  {
-    id: 8,
-    question: "",
-    answer:
-      "",
+      "Program coordinators were very responsible and helped suggest and arrange activities for us outside the volunteering.",
   },
 ];

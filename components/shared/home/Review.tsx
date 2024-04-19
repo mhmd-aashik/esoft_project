@@ -42,7 +42,6 @@ const Review = () => {
                         <h3 className="text-lg font-semibold text-white">
                           {review.name}
                         </h3>
-                        <p className="text-gray-500 text-md">{review.role}</p>
                       </div>
                     </div>
                     <p className="leading-normal text-gray-300 text-md">
