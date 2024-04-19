@@ -8,17 +8,6 @@ import User from "@/models/userModel";
 import Event from "@/models/eventModel";
 import Order from "@/models/order.model";
 
-export async function getAllUsers() {
-  try {
-    await connectToDatabase();
-
-    const alluser = await User.find({});
-    return JSON.parse(JSON.stringify(alluser));
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 export async function createUser(user: CreateUserParams) {
   try {
     await connectToDatabase();
