@@ -4,9 +4,9 @@ import { revalidatePath } from "next/cache";
 
 import { CreateUserParams, UpdateUserParams } from "@/types";
 import { connectToDatabase } from "../mongoose";
-import Order from "@/models/order.model";
 import User from "@/models/userModel";
 import Event from "@/models/eventModel";
+import Order from "@/models/order.model";
 
 export async function createUser(user: CreateUserParams) {
   try {
