@@ -23,7 +23,6 @@ import {
   getAllCategories,
 } from "@/lib/actions/category.action";
 import { ICategory } from "@/models/category.model";
-import { DropdownMenu } from "@radix-ui/react-dropdown-menu";
 
 type DropdownProps = {
   value?: string;
@@ -62,7 +61,7 @@ const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
           categories.map((category) => (
             <SelectItem
               key={category._id}
-              value={category._id}
+              value={category.name}
               className="select-item p-regular-14"
             >
               {category.name}
