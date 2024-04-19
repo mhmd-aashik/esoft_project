@@ -17,7 +17,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { formSchema } from "@/lib/validator";
 import { eventDefaultValues } from "@/constants";
-import Dropdown from "./Dropdown";
 import { Textarea } from "../ui/textarea";
 import { FileUploader } from "./FileUploader";
 import Image from "next/image";
@@ -27,6 +26,7 @@ import { Checkbox } from "../ui/checkbox";
 import { useRouter } from "next/navigation";
 import { createEvent } from "@/lib/actions/events.action";
 import { useUploadThing } from "@/lib/uploadthing";
+import Dropdown from "./Dropdown";
 
 interface Props {
   userId: string;
