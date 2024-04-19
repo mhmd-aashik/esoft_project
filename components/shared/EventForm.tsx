@@ -19,14 +19,17 @@ import { formSchema } from "@/lib/validator";
 import { eventDefaultValues } from "@/constants";
 import Dropdown from "./Dropdown";
 import { Textarea } from "../ui/textarea";
-// import { FileUploader } from "./FileUploader";
+import { FileUploader } from "./FileUploader";
 import Image from "next/image";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Checkbox } from "../ui/checkbox";
+import { useRouter } from "next/navigation";
+import { createEvent } from "@/lib/actions/events.action";
+import { useUploadThing } from "@/lib/uploadthing";
 
 interface Props {
-  userId: string | null;
+  userId: string;
   type: "Create" | "Update";
 }
 
@@ -35,13 +38,44 @@ const EventForm = ({ type, userId }: Props) => {
 
   const initialValues = eventDefaultValues;
 
+  const router = useRouter();
+
+  const { startUpload } = useUploadThing("imageUploader");
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: initialValues,
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    let uploadedImageUrl = values.imageUrl;
+
+    if (files.length > 0) {
+      const uploadedImages = await startUpload(files);
+
+      if (!uploadedImages) {
+        return;
+      }
+
+      uploadedImageUrl = uploadedImages[0].url;
+    }
+
+    if (type === "Create") {
+      try {
+        const newEvent = await createEvent({
+          event: { ...values, imageUrl: uploadedImageUrl },
+          userId,
+          path: "/profile",
+        });
+
+        if (newEvent) {
+          form.reset();
+          router.push(`/events/${newEvent._id}`);
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
   return (
     <Form {...form}>
@@ -102,7 +136,7 @@ const EventForm = ({ type, userId }: Props) => {
             )}
           />
 
-          {/* <FormField
+          <FormField
             control={form.control}
             name="imageUrl"
             render={({ field }) => (
@@ -117,7 +151,7 @@ const EventForm = ({ type, userId }: Props) => {
                 <FormMessage />
               </FormItem>
             )}
-          /> */}
+          />
         </div>
 
         <div className="flex flex-col gap-5 md:flex-row">
@@ -213,6 +247,113 @@ const EventForm = ({ type, userId }: Props) => {
           />
         </div>
 
+        {/* ///////////////////// */}
+
+        <div className="flex flex-col gap-5 md:flex-row">
+          <FormField
+            control={form.control}
+            name="age"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center h-[55px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
+                    <Image
+                      src="/assets/icons/age.svg"
+                      alt="calender"
+                      width={24}
+                      height={24}
+                    />
+                    <Input
+                      placeholder="Age Range (e.g. 18-25)"
+                      {...field}
+                      className="input-field"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="language"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center h-[55px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
+                    <Image
+                      src="/assets/icons/language.svg"
+                      alt="calender"
+                      width={24}
+                      height={24}
+                    />
+                    <Input
+                      placeholder="Language (e.g. English , Sinhala)"
+                      {...field}
+                      className="input-field"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-5 md:flex-row">
+          <FormField
+            control={form.control}
+            name="skills"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center h-[55px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
+                    <Image
+                      src="/assets/icons/skill.svg"
+                      alt="calender"
+                      width={24}
+                      height={24}
+                    />
+                    <Input
+                      placeholder="Skills (e.g. Teaching , Nursing)"
+                      {...field}
+                      className="input-field"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="exprience"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center h-[55px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
+                    <Image
+                      src="/assets/icons/exp.svg"
+                      alt="calender"
+                      width={24}
+                      height={24}
+                    />
+                    <Input
+                      placeholder="Exprience (e.g. 5 years , 2 years , frasher)"
+                      {...field}
+                      className="input-field"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        {/* ////////////////// */}
         <div className="flex flex-col gap-5 md:flex-row">
           <FormField
             control={form.control}
@@ -251,6 +392,8 @@ const EventForm = ({ type, userId }: Props) => {
                                 Free Ticket
                               </label>
                               <Checkbox
+                                onCheckedChange={field.onChange}
+                                checked={field.value}
                                 id="isFree"
                                 className="mr-2 h-5 w-5 border-2 border-primary-500 "
                               />
@@ -266,31 +409,6 @@ const EventForm = ({ type, userId }: Props) => {
               </FormItem>
             )}
           />
-
-          {/* <FormField
-            control={form.control}
-            name="url"
-            render={({ field }) => (
-              <FormItem className="w-full">
-                <FormControl>
-                  <div className="flex-center h-[55px] w-full overflow-hidden rounded-full bg-gray-50 px-4 py-2">
-                    <Image
-                      src="/assets/icons/link.svg"
-                      alt="link"
-                      width={24}
-                      height={24}
-                    />
-                    <Input
-                      placeholder="Event Location or Online"
-                      {...field}
-                      className="input-field"
-                    />
-                  </div>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          /> */}
         </div>
 
         <Button

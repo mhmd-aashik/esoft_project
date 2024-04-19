@@ -7,7 +7,7 @@ import VideoSction from "@/components/shared/home/VideoSction";
 
 export default async function Home() {
   return (
-    <main className="bg-[#020617] h-full">
+    <main className="bg-[#020617]">
       <ShuffleHero />
       {/* <LogoSlider /> */}
       <VideoSction />
