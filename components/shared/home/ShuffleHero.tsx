@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 const ShuffleHero = () => {
   return (
     <section className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-7xl mx-auto ">
-      <div>
-        <h3 className="text-4xl md:text-6xl text-white font-semibold">
+      <div className="flex flex-col items-center justify-center">
+        <h3 className="text-4xl md:text-6xl text-white font-semibold text-center">
           Empower. Engage. Change Together.
         </h3>
         <p className="text-base md:text-lg text-slate-400 my-4 md:my-6 line-clamp-2">
