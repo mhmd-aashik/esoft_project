@@ -28,51 +28,51 @@ const Footer = () => {
 
         <div className="flex flex-col items-center justify-between md:flex-row">
           <Link href="/" className="flex gap-2">
-            <p className="text-3xl font-poppins font-bold text-ijlal-500 ">
-              <span className="">E</span>
-              <span className="text-blue-500">m</span>
-              <span className="text-purple-500">p</span>
-            </p>
-            <Image
-              src="/assets/icons/logo.svg"
-              width={32}
-              height={32}
-              alt="Evently logo"
-              className="overflow-hidden scale-[1.9]"
-            />
-            <p className="text-3xl font-poppins font-bold text-ijlal-500 ">
-              <span className="text-pink-500">w</span>
-              <span className="text-yellow-500">e</span>
-              <span className="text-red-500">r</span>
-            </p>
+          <p className="text-3xl font-poppins font-bold">
+            <span className="text-blue-500">E</span>
+            <span className="text-purple-500">m</span>
+            <span className="text-green-500">p</span>
+          </p>
+          <Image
+            src="/assets/icons/logo.svg"
+            width={32}
+            height={32}
+            alt="Evently logo"
+            className="overflow-hidden scale-[1.9]"
+          />
+          <p className="text-3xl font-poppins font-bold text-ijlal-500 ">
+            <span className="text-pink-500">w</span>
+            <span className="text-yellow-500">e</span>
+            <span className="text-red-500">r</span>
+          </p>
           </Link>
 
           <div className="flex mt-4 md:m-0">
             <div className="-mx-4">
-              <a
-                href="#"
+              <Link
+                href="/about"
                 className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
                 About
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/events"
                 className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
-                Blog
-              </a>
-              <a
-                href="#"
+                events
+              </Link>
+              <Link
+                href="/sign-in"
                 className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
-                News
-              </a>
-              <a
-                href="#"
+                help
+              </Link>
+              <Link
+                href="/sign-up"
                 className="px-4 text-sm text-gray-600 transition-colors duration-300 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 hover:underline"
               >
-                Contacts
-              </a>
+                sign up
+              </Link>
             </div>
           </div>
         </div>
