@@ -18,18 +18,16 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { Input } from "../ui/input";
-import {
-  createCategory,
-  getAllCategories,
-} from "@/lib/actions/category.action";
+
 import { ICategory } from "@/models/category.model";
+import { createCategory, getAllCategories } from "@/lib/actions/category.action";
 
 type DropdownProps = {
   value?: string;
   onChangeHandler?: () => void;
 };
 
-const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
+const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [newCategory, setNewCategory] = useState("");
 
@@ -61,7 +59,7 @@ const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
           categories.map((category) => (
             <SelectItem
               key={category._id}
-              value={category.name}
+              value={category._id}
               className="select-item p-regular-14"
             >
               {category.name}
@@ -99,4 +97,4 @@ const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
   );
 };
 
-export default CategoryMenu;
+export default Dropdown;
