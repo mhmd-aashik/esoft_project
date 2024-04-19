@@ -26,7 +26,7 @@ import { Checkbox } from "../ui/checkbox";
 import { useRouter } from "next/navigation";
 import { createEvent } from "@/lib/actions/events.action";
 import { useUploadThing } from "@/lib/uploadthing";
-import Dropdown from "./Dropdown";
+import { Dropdown } from "./Dropdown";
 
 interface Props {
   userId: string;

@@ -29,7 +29,7 @@ interface DropDownProps {
   onChangeHandler?: () => void;
 }
 
-const Dropdown = ({ value, onChangeHandler }: DropDownProps) => {
+export function Dropdown({ value, onChangeHandler }: DropDownProps) {
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [newCategory, setNewCategory] = useState("");
 
@@ -93,6 +93,4 @@ const Dropdown = ({ value, onChangeHandler }: DropDownProps) => {
       </SelectContent>
     </Select>
   );
-};
-
-export default Dropdown;
+}
