@@ -57,8 +57,6 @@ const EventForm = ({ type, userId }: Props) => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-
     let uploadedImageUrl = values.imageUrl;
 
     if (files.length > 0) {
