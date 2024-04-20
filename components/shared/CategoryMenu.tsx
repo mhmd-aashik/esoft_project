@@ -36,6 +36,16 @@ const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
           <SelectItem value="Advocacy and activism">
             Advocacy and activism
           </SelectItem>
+          <SelectItem value="Health service">Health services</SelectItem>
+          <SelectItem value="Education">Education</SelectItem>
+          <SelectItem value="Environmental conservation">
+            Environmental conservation
+          </SelectItem>
+          <SelectItem value="Animal welfare">Animal welfare</SelectItem>
+          <SelectItem value="Disaster relief">Disaster relief</SelectItem>
+          <SelectItem value="Community development">
+            Community development
+          </SelectItem>
           <SelectItem value="Human rights">Human rights</SelectItem>
           <SelectItem value="Elderly care">Elderly care</SelectItem>
           <SelectItem value="Youth development">Youth development</SelectItem>
