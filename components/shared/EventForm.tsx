@@ -201,12 +201,10 @@ const EventForm = ({ type, userId }: Props) => {
                     defaultValue={field.value}
                   >
                     <SelectTrigger className="select-field">
-                      <SelectValue placeholder="Select a fruit" />
+                      <SelectValue placeholder="Organization / Individual" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
-                        <SelectLabel>Organization / Individual</SelectLabel>
-
                         <SelectItem value="Organization">
                           Organization
                         </SelectItem>
