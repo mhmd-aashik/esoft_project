@@ -21,16 +21,6 @@ const CategoryMenu = ({ value, onChangeHandler }: DropdownProps) => {
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="Health service">Health services</SelectItem>
-          <SelectItem value="Education">Education</SelectItem>
-          <SelectItem value="Environmental conservation">
-            Environmental conservation
-          </SelectItem>
-          <SelectItem value="Animal welfare">Animal welfare</SelectItem>
-          <SelectItem value="Disaster relief">Disaster relief</SelectItem>
-          <SelectItem value="Community development">
-            Community development
-          </SelectItem>
           <SelectItem value="Social services">Social services</SelectItem>
           <SelectItem value="Arts and culture">Arts and culture</SelectItem>
           <SelectItem value="Advocacy and activism">

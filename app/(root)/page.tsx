@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <main className="bg-[#020617]">
       <ShuffleHero />
-      {/* <LogoSlider /> */}
+      <LogoSlider />
       <VideoSction />
       <Review />
       <AccordianFAQ />

@@ -52,7 +52,7 @@ const LogoSlider = () => {
             alt="airtel"
           />
           <Image
-            src="/assets/logos/6.png"
+            src="/assets/logos/6 copy.png"
             width={150}
             height={100}
             alt="ikman"
