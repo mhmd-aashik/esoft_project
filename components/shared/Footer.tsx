@@ -27,24 +27,24 @@ const Footer = () => {
         <hr className="h-px bg-gray-200 border-none my-7 dark:bg-gray-700" />
 
         <div className="flex flex-col items-center justify-between md:flex-row">
-          <Link href="/" className="flex gap-2">
-          <p className="text-3xl font-poppins font-bold">
-            <span className="text-blue-500">E</span>
-            <span className="text-purple-500">m</span>
-            <span className="text-green-500">p</span>
-          </p>
-          <Image
-            src="/assets/icons/logo.svg"
-            width={32}
-            height={32}
-            alt="Evently logo"
-            className="overflow-hidden scale-[1.9]"
-          />
-          <p className="text-3xl font-poppins font-bold text-ijlal-500 ">
-            <span className="text-pink-500">w</span>
-            <span className="text-yellow-500">e</span>
-            <span className="text-red-500">r</span>
-          </p>
+          <Link href="/" className="flex font-ds gap-2">
+            <p className="text-3xl font-poppins font-bold">
+              <span className="text-blue-500">E</span>
+              <span className="text-purple-500">m</span>
+              <span className="text-green-500">p</span>
+            </p>
+            <Image
+              src="/assets/icons/logo.svg"
+              width={32}
+              height={32}
+              alt="Evently logo"
+              className="overflow-hidden scale-[1.9]"
+            />
+            <p className="text-3xl font-poppins font-bold text-ijlal-500 ">
+              <span className="text-pink-500">w</span>
+              <span className="text-yellow-500">e</span>
+              <span className="text-red-500">r</span>
+            </p>
           </Link>
 
           <div className="flex mt-4 md:m-0">

@@ -68,6 +68,7 @@ module.exports = withUt({
       },
       fontFamily: {
         poppins: ["var(--font-poppins)"],
+        ds: ["var(--font-ds)"],
       },
       borderRadius: {
         lg: "var(--radius)",

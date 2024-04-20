@@ -9,8 +9,8 @@ const Header = () => {
   return (
     <header className="w-full bg-[#020617] sticky top-0 z-30">
       <nav className="max-w-7xl flex items-center justify-between  lg:mx-auto p-5 md:px-10 xl:px-0">
-        <Link href="/" className="w-fit flex gap-3 items-center">
-          <p className="text-3xl font-poppins font-bold">
+        <Link href="/" className="w-fit font-ds flex gap-3 items-center">
+          <p className="text-3xl font-bold">
             <span className="text-blue-500">E</span>
             <span className="text-purple-500">m</span>
             <span className="text-green-500">p</span>
