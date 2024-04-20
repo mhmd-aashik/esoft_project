@@ -6,7 +6,6 @@ import { CreateUserParams, UpdateUserParams } from "@/types";
 import { connectToDatabase } from "../mongoose";
 import User from "@/models/userModel";
 import Event from "@/models/eventModel";
-import Order from "@/models/order.model";
 
 export async function createUser(user: CreateUserParams) {
   try {
@@ -67,10 +66,6 @@ export async function deleteUser(clerkId: string) {
       ),
 
       // Update the 'orders' collection to remove references to the user
-      Order.updateMany(
-        { _id: { $in: userToDelete.orders } },
-        { $unset: { buyer: 1 } }
-      ),
     ]);
 
     // Delete user
