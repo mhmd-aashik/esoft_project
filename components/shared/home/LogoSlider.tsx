@@ -12,20 +12,16 @@ const LogoSlider = () => {
           Our Official Partners
         </h2>
       </div>
-      <Marquee
-        className="py-4 flex items-center"
-        pauseOnHover={true}
-        speed={20}
-      >
-        <div className="flex items-center">
+      <Marquee className="py-4 flex" pauseOnHover={true} speed={20}>
+        <div className="flex items-center justify-around sm:space-x-10 space-x-6">
           <Image
-            src="/assets/logos/1.png"
+            src="/assets/logos/8.png"
             width={150}
             height={100}
             alt="abans"
           />
           <Image
-            src="/assets/logos/2.png"
+            src="/assets/logos/9 copy.png"
             width={150}
             height={100}
             alt="daraz"
