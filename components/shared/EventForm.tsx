@@ -48,6 +48,8 @@ const EventForm = ({ type, userId }: Props) => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+
     let uploadedImageUrl = values.imageUrl;
 
     if (files.length > 0) {
@@ -102,7 +104,7 @@ const EventForm = ({ type, userId }: Props) => {
           />
           <FormField
             control={form.control}
-            name="categoryId"
+            name="category"
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>

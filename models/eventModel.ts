@@ -33,7 +33,7 @@ const EventSchema = new Schema({
   language: { type: String },
   exprience: { type: String },
   skills: { type: String },
-  category: { type: Schema.Types.ObjectId, ref: "Category" },
+  category: { type: String },
   organizer: { type: Schema.Types.ObjectId, ref: "User" },
 });
 

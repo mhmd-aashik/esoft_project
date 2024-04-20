@@ -13,7 +13,7 @@ export const formSchema = z.object({
   imageUrl: z.string(),
   startDateTime: z.date(),
   endDateTime: z.date(),
-  categoryId: z.string(),
+  category: z.string(),
   price: z.string(),
   isFree: z.boolean(),
   age: z.string(),

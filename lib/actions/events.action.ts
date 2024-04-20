@@ -9,7 +9,7 @@ export const createEvent = async ({
   event,
   userId,
   path,
-}: any) => {
+}: CreateEventParams) => {
   try {
     await connectToDatabase();
 
@@ -19,7 +19,6 @@ export const createEvent = async ({
 
     const newEvent = await Event.create({
       ...event,
-      category: event.categoryId,
       organizer: userId,
     });
 
