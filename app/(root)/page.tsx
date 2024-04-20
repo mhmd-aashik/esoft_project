@@ -1,5 +1,4 @@
 import { AccordianFAQ } from "@/components/shared/home/AccordianFAQ";
-import Accordion from "@/components/shared/home/Accordion";
 import LogoSlider from "@/components/shared/home/LogoSlider";
 import Review from "@/components/shared/home/Review";
 import ShuffleHero from "@/components/shared/home/ShuffleHero";
