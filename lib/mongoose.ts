@@ -13,6 +13,7 @@ export const connectToDatabase = async () => {
     cached.promise ||
     mongoose.connect(MONGODB_URI, {
       dbName: "empower",
+      bufferCommands: false,
     });
 
   cached.conn = await cached.promise;
