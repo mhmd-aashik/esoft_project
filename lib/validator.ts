@@ -14,10 +14,9 @@ export const formSchema = z.object({
   startDateTime: z.date(),
   endDateTime: z.date(),
   category: z.string(),
-  price: z.string(),
-  isFree: z.boolean(),
   age: z.string(),
   language: z.string(),
   exprience: z.string(),
   skills: z.string().min(3),
+  orgindu: z.string(),
 });

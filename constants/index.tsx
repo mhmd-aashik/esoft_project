@@ -117,11 +117,10 @@ export const eventDefaultValues = {
   imageUrl: "",
   startDateTime: new Date(),
   endDateTime: new Date(),
-  categoryId: "",
-  price: "",
-  isFree: false,
+  category: "",
   age: "",
   language: "",
   exprience: "",
   skills: "",
+  orgindu: "",
 };
